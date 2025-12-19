@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Milan Family Experience · Juego Sorpresa Interactivo</title>
+  <meta name="theme-color" content="#1c1320" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="hero-left">
+        <div class="subtitle">Juego web familiar</div>
+        <h1 class="title-main">Milan <span>Family</span> Experience</h1>
+        <p class="tagline">
+          Jugamos juntos, respondemos en equipo y descubrimos la sorpresa final. ✈️
+        </p>
+      </div>
+
+      <div class="timer-box">
+        <div class="timer-label">Tiempo aproximado</div>
+        <div class="timer" id="global-timer">20:00</div>
+      </div>
+    </header>
+
+    <!-- MAIN CARD -->
+    <main class="card" role="main">
+
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <div class="card-inner">
+
+        <!-- CONTENEDOR GLOBAL DE FEEDBACK (GIFs) -->
+        <div id="feedback-visual" class="feedback-visual"></div>
+
+        <!-- ======================= STEP 0 ======================= -->
+        <section class="step active" data-step="0">
+          <h2 class="step-title">Bienvenidos a bordo</h2>
+          <p class="step-sub">¡Es un juego cooperativo!</p>
+
+          <p class="question">
+            Este juego dura unos 20 minutos.  
+            No hay turnos, ni puntos, ni ganadores:  
+            <strong>todo lo resolvemos juntos como familia</strong>.
+          </p>
+
+          <p class="hint">
+            Nos toca ponernos cómodos en el “salón-avión”.  
+            Cuando estemos listos, le damos a <strong>Empezar</strong>.
+          </p>
+
+          <div class="actions">
+            <button class="btn primary" data-next>Empezar</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 1 ======================= -->
+        <section class="step" data-step="1">
+          <h2 class="step-title">Ronda 1 · Navidad en familia</h2>
+          <p class="step-sub">Entramos en calor</p>
+
+          <p class="question">¿Qué plan navideño encaja más con nosotros?</p>
+
+          <div class="grid">
+            <label class="chip">
+              <input type="radio" name="navidad" value="Peli, manta y sofá">
+              <span class="emoji">🎬</span>Peli, manta y sofá
+            </label>
+
+            <label class="chip">
+              <input type="radio" name="navidad" value="Sobremesa eterna">
+              <span class="emoji">🍽️</span>Sobremesa eterna
+            </label>
+
+            <label class="chip">
+              <input type="radio" name="navidad" value="Escapada navideña">
+              <span class="emoji">✈️</span>Escapada navideña
+            </label>
+
+            <label class="chip">
+              <input type="radio" name="navidad" value="Comida increíble">
+              <span class="emoji">🍝</span>Comida increíble
+            </label>
+          </div>
+
+          <p class="hint">
+            Lo hablamos entre todos y elegimos una sola opción.  
+            Aquí no hay acierto o error, solo nuestro estilo navideño.
+          </p>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 2 ======================= -->
+        <section class="step" data-step="2">
+          <h2 class="step-title">Ronda 2 · Mamá</h2>
+          <p class="step-sub">Nos conocemos bien</p>
+
+          <p class="question">¿Cuál es el nuevo hobbie de mamá?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="hobby_mama" value="Coser"><span class="emoji">🧵</span>Coser</label>
+            <label class="chip"><input type="radio" name="hobby_mama" value="Pintar cuadros"><span class="emoji">🎨</span>Pintar cuadros</label>
+            <label class="chip"><input type="radio" name="hobby_mama" value="Yoga"><span class="emoji">🧘‍♀️</span>Yoga</label>
+            <label class="chip"><input type="radio" name="hobby_mama" value="Jardinería"><span class="emoji">🌱</span>Jardinería</label>
+          </div>
+
+          <p class="hint">
+            Lo decidimos en equipo. Si acertamos, los minions nos aplauden;  
+            si no, Papá Noel se enfada un poquito…
+          </p>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 3 ======================= -->
+        <section class="step" data-step="3">
+          <h2 class="step-title">Ronda 3 · Papá</h2>
+          <p class="step-sub">Seguimos con la familia</p>
+
+          <p class="question">¿Quién es el cantante favorito de papá últimamente?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cantante_papa" value="Rosalía"><span class="emoji">🎤</span>Rosalía</label>
+            <label class="chip"><input type="radio" name="cantante_papa" value="Sabina"><span class="emoji">🎶</span>Sabina</label>
+            <label class="chip"><input type="radio" name="cantante_papa" value="Shakira"><span class="emoji">💃</span>Shakira</label>
+            <label class="chip"><input type="radio" name="cantante_papa" value="Aitana"><span class="emoji">🌟</span>Aitana</label>
+          </div>
+
+          <p class="hint">Nos toca ponernos de acuerdo antes de seguir.</p>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 4 ======================= -->
+        <section class="step" data-step="4">
+          <h2 class="step-title">Ronda 4 · El nene</h2>
+          <p class="step-sub">Recordamos momentos</p>
+
+          <p class="question">¿Cuál ha sido el regalo favorito del nene?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="regalo_nene" value="Un perrete"><span class="emoji">🐶</span>Un perrete</label>
+            <label class="chip"><input type="radio" name="regalo_nene" value="Una consola"><span class="emoji">🎮</span>Una consola</label>
+            <label class="chip"><input type="radio" name="regalo_nene" value="Una bici"><span class="emoji">🚲</span>Una bici</label>
+            <label class="chip"><input type="radio" name="regalo_nene" value="Un coche teledirigido"><span class="emoji">🚗</span>Un coche teledirigido</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 5 ======================= -->
+        <section class="step" data-step="5">
+          <h2 class="step-title">Ronda 5 · Elisa</h2>
+          <p class="step-sub">Hablamos de comida</p>
+
+          <p class="question">¿Cuál es la comida favorita de Elisa?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="comida_elisa" value="Sushi y croquetas"><span class="emoji">🍣</span>Sushi y croquetas</label>
+            <label class="chip"><input type="radio" name="comida_elisa" value="Pizza"><span class="emoji">🍕</span>Pizza</label>
+            <label class="chip"><input type="radio" name="comida_elisa" value="Pasta carbonara"><span class="emoji">🍝</span>Pasta carbonara</label>
+            <label class="chip"><input type="radio" name="comida_elisa" value="Ensalada césar"><span class="emoji">🥗</span>Ensalada césar</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ======================= CULTURA GENERAL BÁSICA ======================= -->
+
+        <!-- 1 -->
+        <section class="step" data-step="6">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 1</p>
+
+          <p class="question">¿Qué animal duerme más horas al día?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg1" value="Koala"><span class="emoji">🐨</span>Koala</label>
+            <label class="chip"><input type="radio" name="cg1" value="Perro"><span class="emoji">🐶</span>Perro</label>
+            <label class="chip"><input type="radio" name="cg1" value="León"><span class="emoji">🦁</span>León</label>
+            <label class="chip"><input type="radio" name="cg1" value="Elefante"><span class="emoji">🐘</span>Elefante</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="step" data-step="7">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 2</p>
+
+          <p class="question">¿Qué país consume más chocolate por persona?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg2" value="Suiza"><span class="emoji">🍫</span>Suiza</label>
+            <label class="chip"><input type="radio" name="cg2" value="España"><span class="emoji">🇪🇸</span>España</label>
+            <label class="chip"><input type="radio" name="cg2" value="Italia"><span class="emoji">🇮🇹</span>Italia</label>
+            <label class="chip"><input type="radio" name="cg2" value="Estados Unidos"><span class="emoji">🇺🇸</span>Estados Unidos</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="step" data-step="8">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 3</p>
+
+          <p class="question">¿Cuál es el idioma más hablado del mundo como lengua materna?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg3" value="Chino mandarín"><span class="emoji">🈶</span>Chino mandarín</label>
+            <label class="chip"><input type="radio" name="cg3" value="Inglés"><span class="emoji">🇬🇧</span>Inglés</label>
+            <label class="chip"><input type="radio" name="cg3" value="Español"><span class="emoji">🇪🇸</span>Español</label>
+            <label class="chip"><input type="radio" name="cg3" value="Hindi"><span class="emoji">🇮🇳</span>Hindi</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="step" data-step="9">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 4</p>
+
+          <p class="question">¿Qué alimento se inventó “por error”?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg4" value="Patatas fritas"><span class="emoji">🍟</span>Patatas fritas</label>
+            <label class="chip"><input type="radio" name="cg4" value="Chocolate con leche"><span class="emoji">🍫</span>Chocolate con leche</label>
+            <label class="chip"><input type="radio" name="cg4" value="Galletas Oreo"><span class="emoji">🍪</span>Galletas Oreo</label>
+            <label class="chip"><input type="radio" name="cg4" value="Palomitas"><span class="emoji">🍿</span>Palomitas</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- 5 -->
+        <section class="step" data-step="10">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 5</p>
+
+          <p class="question">¿Qué animal es incapaz de saltar?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg5" value="Elefante"><span class="emoji">🐘</span>Elefante</label>
+            <label class="chip"><input type="radio" name="cg5" value="Hipopótamo"><span class="emoji">🦛</span>Hipopótamo</label>
+            <label class="chip"><input type="radio" name="cg5" value="Perezoso"><span class="emoji">🦥</span>Perezoso</label>
+            <label class="chip"><input type="radio" name="cg5" value="Rinoceronte"><span class="emoji">🦏</span>Rinoceronte</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- 6 -->
+        <section class="step" data-step="11">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 6</p>
+
+          <p class="question">¿Qué país tiene forma de bota en el mapa?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg6" value="Italia"><span class="emoji">🇮🇹</span>Italia</label>
+            <label class="chip"><input type="radio" name="cg6" value="Argentina"><span class="emoji">🇦🇷</span>Argentina</label>
+            <label class="chip"><input type="radio" name="cg6" value="India"><span class="emoji">🇮🇳</span>India</label>
+            <label class="chip"><input type="radio" name="cg6" value="Suecia"><span class="emoji">🇸🇪</span>Suecia</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- 7 -->
+        <section class="step" data-step="12">
+          <h2 class="step-title">Cultura curiosa</h2>
+          <p class="step-sub">Pregunta 7</p>
+
+          <p class="question">¿Cuál es el único continente sin serpientes ni reptiles?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="cg7" value="Antártida"><span class="emoji">❄️</span>Antártida</label>
+            <label class="chip"><input type="radio" name="cg7" value="Europa"><span class="emoji">🌍</span>Europa</label>
+            <label class="chip"><input type="radio" name="cg7" value="Oceanía"><span class="emoji">🌊</span>Oceanía</label>
+            <label class="chip"><input type="radio" name="cg7" value="África"><span class="emoji">🦒</span>África</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ============ PISTAS CULTURALES AVANZADAS (10) ============ -->
+
+        <!-- Pista 1 -->
+        <section class="step" data-step="13">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 1</p>
+
+          <p class="question">¿Qué movimiento artístico se caracteriza por recuperar la proporción, el equilibrio y la perspectiva clásica?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv1" value="Romanticismo"><span class="emoji">❤️</span>Romanticismo</label>
+            <label class="chip"><input type="radio" name="adv1" value="Renacimiento"><span class="emoji">📐</span>Renacimiento</label>
+            <label class="chip"><input type="radio" name="adv1" value="Impresionismo"><span class="emoji">🌅</span>Impresionismo</label>
+            <label class="chip"><input type="radio" name="adv1" value="Barroco"><span class="emoji">💫</span>Barroco</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 2 -->
+        <section class="step" data-step="14">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 2</p>
+
+          <p class="question">¿Qué tipo de edificio suele tener pináculos muy altos y fachadas llenas de detalles tallados?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv2" value="Rascacielos de cristal"><span class="emoji">🏙️</span>Rascacielos de cristal</label>
+            <label class="chip"><input type="radio" name="adv2" value="Catedral gótica"><span class="emoji">⛪</span>Catedral gótica</label>
+            <label class="chip"><input type="radio" name="adv2" value="Estación moderna"><span class="emoji">🚉</span>Estación moderna</label>
+            <label class="chip"><input type="radio" name="adv2" value="Biblioteca minimalista"><span class="emoji">📚</span>Biblioteca minimalista</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 3 -->
+        <section class="step" data-step="15">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 3</p>
+
+          <p class="question">¿Qué tipo de evento se considera una referencia mundial para las grandes casas de moda?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv3" value="Feria del libro"><span class="emoji">📖</span>Feria del libro</label>
+            <label class="chip"><input type="radio" name="adv3" value="Semana de la Moda"><span class="emoji">👗</span>Semana de la Moda</label>
+            <label class="chip"><input type="radio" name="adv3" value="Festival de cine"><span class="emoji">🎬</span>Festival de cine</label>
+            <label class="chip"><input type="radio" name="adv3" value="Feria de tecnología"><span class="emoji">📱</span>Feria de tecnología</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 4 -->
+        <section class="step" data-step="16">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 4</p>
+
+          <p class="question">¿Qué objeto cotidiano es un icono clásico del diseño industrial y suele exponerse en museos de diseño?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv4" value="Una silla"><span class="emoji">🪑</span>Una silla</label>
+            <label class="chip"><input type="radio" name="adv4" value="Una plancha"><span class="emoji">🧺</span>Una plancha</label>
+            <label class="chip"><input type="radio" name="adv4" value="Un paraguas"><span class="emoji">☂️</span>Un paraguas</label>
+            <label class="chip"><input type="radio" name="adv4" value="Una batidora"><span class="emoji">🥣</span>Una batidora</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 5 -->
+        <section class="step" data-step="17">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 5</p>
+
+          <p class="question">¿Qué ingrediente se relaciona con platos de arroz cremosos muy famosos en Europa?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv5" value="Parmesano"><span class="emoji">🧀</span>Parmesano</label>
+            <label class="chip"><input type="radio" name="adv5" value="Coco rallado"><span class="emoji">🥥</span>Coco rallado</label>
+            <label class="chip"><input type="radio" name="adv5" value="Yogur griego"><span class="emoji">🍶</span>Yogur griego</label>
+            <label class="chip"><input type="radio" name="adv5" value="Salsa de soja"><span class="emoji">🥢</span>Salsa de soja</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 6 -->
+        <section class="step" data-step="18">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 6</p>
+
+          <p class="question">¿Qué técnica utilizaba Leonardo da Vinci para lograr transiciones muy suaves de luz y sombra?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv6" value="Sfumato"><span class="emoji">🌫️</span>Sfumato</label>
+            <label class="chip"><input type="radio" name="adv6" value="Puntillismo"><span class="emoji">🎯</span>Puntillismo</label>
+            <label class="chip"><input type="radio" name="adv6" value="Collage"><span class="emoji">🧩</span>Collage</label>
+            <label class="chip"><input type="radio" name="adv6" value="Graffiti"><span class="emoji">🖌️</span>Graffiti</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 7 -->
+        <section class="step" data-step="19">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 7</p>
+
+          <p class="question">¿Qué combinación de sectores caracteriza a varias ciudades europeas conocidas por su estilo y su economía fuerte?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv7" value="Moda y diseño industrial"><span class="emoji">👜</span>Moda y diseño industrial</label>
+            <label class="chip"><input type="radio" name="adv7" value="Minería y pesca"><span class="emoji">⚒️</span>Minería y pesca</label>
+            <label class="chip"><input type="radio" name="adv7" value="Agricultura y ganadería"><span class="emoji">🚜</span>Agricultura y ganadería</label>
+            <label class="chip"><input type="radio" name="adv7" value="Turismo de playa low-cost"><span class="emoji">🏝️</span>Turismo de playa low-cost</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 8 -->
+        <section class="step" data-step="20">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 8</p>
+
+          <p class="question">¿Qué tipo de transporte conectó grandes ciudades europeas reduciendo drásticamente el tiempo de viaje en las últimas décadas?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv8" value="Tren de alta velocidad"><span class="emoji">🚄</span>Tren de alta velocidad</label>
+            <label class="chip"><input type="radio" name="adv8" value="Tranvía tirado por caballos"><span class="emoji">🐴</span>Tranvía tirado por caballos</label>
+            <label class="chip"><input type="radio" name="adv8" value="Dirigible"><span class="emoji">🎈</span>Dirigible</label>
+            <label class="chip"><input type="radio" name="adv8" value="Barco de vapor"><span class="emoji">🚢</span>Barco de vapor</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 9 -->
+        <section class="step" data-step="21">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 9</p>
+
+          <p class="question">¿Qué tipo de museo mezcla ingeniería, arte y objetos cotidianos?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv9" value="Museo del diseño"><span class="emoji">🖼️</span>Museo del diseño</label>
+            <label class="chip"><input type="radio" name="adv9" value="Museo marítimo"><span class="emoji">⚓</span>Museo marítimo</label>
+            <label class="chip"><input type="radio" name="adv9" value="Museo de dinosaurios"><span class="emoji">🦖</span>Museo de dinosaurios</label>
+            <label class="chip"><input type="radio" name="adv9" value="Galería de retratos"><span class="emoji">🖌️</span>Galería de retratos</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- Pista 10 -->
+        <section class="step" data-step="22">
+          <h2 class="step-title">Pistas culturales avanzadas</h2>
+          <p class="step-sub">Pista 10</p>
+
+          <p class="question">¿Qué costumbre comparten varias ciudades europeas con clima cambiante para pasear y hacer compras?</p>
+
+          <div class="grid">
+            <label class="chip"><input type="radio" name="adv10" value="Pasear por galerías comerciales cubiertas"><span class="emoji">🛍️</span>Pasear por galerías comerciales cubiertas</label>
+            <label class="chip"><input type="radio" name="adv10" value="Cenar a las 17:00"><span class="emoji">🕔</span>Cenar a las 17:00</label>
+            <label class="chip"><input type="radio" name="adv10" value="Comer helado solo en invierno"><span class="emoji">🍨</span>Comer helado solo en invierno</label>
+            <label class="chip"><input type="radio" name="adv10" value="Desayunar sopa caliente"><span class="emoji">🍲</span>Desayunar sopa caliente</label>
+          </div>
+
+          <p class="hint">
+            Todas estas pistas van encajando poco a poco…  
+            pero el destino final todavía no se revela.
+          </p>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Siguiente</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 23: ACERTIJO FINAL ======================= -->
+        <section class="step" data-step="23">
+          <h2 class="step-title">El acertijo del destino</h2>
+          <p class="step-sub">Últimas pistas</p>
+
+          <p class="question">Ahora sí: respondemos juntos al gran acertijo.</p>
+
+          <div class="field">
+            <label>1. ¿En qué país está la ciudad secreta?</label>
+
+            <div class="grid">
+              <label class="chip"><input type="radio" name="pais" value="España"><span class="emoji">🇪🇸</span>España</label>
+              <label class="chip"><input type="radio" name="pais" value="Italia"><span class="emoji">🇮🇹</span>Italia</label>
+              <label class="chip"><input type="radio" name="pais" value="Francia"><span class="emoji">🇫🇷</span>Francia</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>2. ¿Por qué es famosa esta ciudad?</label>
+
+            <div class="grid">
+              <label class="chip"><input type="radio" name="fama" value="Playas caribeñas"><span class="emoji">🏖️</span>Playas caribeñas</label>
+              <label class="chip"><input type="radio" name="fama" value="Moda y diseño"><span class="emoji">🕶️</span>Moda y diseño</label>
+              <label class="chip"><input type="radio" name="fama" value="Historia medieval"><span class="emoji">🏰</span>Historia medieval</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>3. ¿Qué obra de Leonardo da Vinci está allí?</label>
+
+            <div class="grid">
+              <label class="chip"><input type="radio" name="leonardo" value="Ni idea 😂"><span class="emoji">🤷‍♀️</span>Ni idea 😂</label>
+              <label class="chip"><input type="radio" name="leonardo" value="La Última Cena"><span class="emoji">🍷</span>La Última Cena</label>
+              <label class="chip"><input type="radio" name="leonardo" value="La Mona Lisa"><span class="emoji">🖼️</span>La Mona Lisa</label>
+            </div>
+          </div>
+
+          <p class="hint">
+            Si aquí lo clavamos, los minions van a aplaudir muy fuerte.  
+            Luego pasamos directamente a la revelación final…
+          </p>
+
+          <div class="actions">
+            <button class="btn" data-prev>Volver</button>
+            <button class="btn primary" data-next>Ver resultado</button>
+          </div>
+        </section>
+
+        <!-- ======================= STEP 24: FINAL ======================= -->
+        <section class="step" data-step="24">
+          <div class="final-screen">
+            <p class="step-sub">Embarque completado</p>
+            <h2 class="final-title">MILÁN</h2>
+            <p class="final-sub">🎁 ¡Sorpresa! Este año nos vamos de viaje familiar a visitar a Nanito 🎁</p>
+
+            <p class="final-copy">
+              Gracias por todos los momentos que compartimos como familia.
+              Este año nos toca preparar las maletas y visitar a nuestro aventurero favorito en
+              <strong>Milán</strong>.  
+              Cámara lista, zapatos cómodos… ¡y muchas ganas de disfrutar juntos!
+            </p>
+
+            <div class="ticket">
+              <img src="assets/vale_milan.png" alt="Vale de viaje a Milán">
+            </div>
+
+            <p class="hint" style="margin-top:10px;">Momento perfecto para sacar el vale físico. 💌</p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <div class="footer">
+      © Milan Family Experience · Juego sorpresa interactivo
+    </div>
+
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

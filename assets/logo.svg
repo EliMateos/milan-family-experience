@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1320"/>
+      <stop offset="1" stop-color="#d4819f"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="80" rx="16" fill="#f6efe5"/>
+  <rect x="10" y="14" width="52" height="52" rx="12" fill="url(#g)"/>
+  <path d="M20 47l17-6-4-9 7 7 13-5-5 10 8 3-7 1-7 6-2-7-10-4z"
+        fill="#f6efe5" opacity="0.95"/>
+  <text x="80" y="34" font-family="Bebas Neue, system-ui" font-size="26" letter-spacing="4"
+        fill="#1c1320">MILAN FAMILY</text>
+  <text x="80" y="54" font-family="Montserrat, system-ui" font-size="13" letter-spacing="2"
+        fill="#7c6b7a">INTERACTIVE SURPRISE INVITATION GAME</text>
+</svg>
